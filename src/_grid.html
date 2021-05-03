@@ -1,0 +1,114 @@
+{% set sortBtnArr= [{ title: "Web", id: "web" }, { title: "Digital Art", id: "art"},  { title: "Illustrations", id: "illustrations"},
+{ title: "Branding", id: "branding"},  { title: "All", id: "all"}]%}
+
+<!-- {% set imgArr= [{ img: "mu1.jpg", id: 1, data: "web" }, { img: "print1.jpg", id: 2, data: "art"},  { img: "ui2.jpg", id: 3, data: "branding"},
+{ img: "web1.jpg", id: 4, data: "art"},  { img: "mu2.jpg", id: 5, data: "illustrations"}, { img: "print2.jpg", id: 6, data: "web"},{ img: "ui1.jpg", id: 7, data: "branding"},{ img: "ui3.jpg", id: 8, data: "illustrations"}]%} -->
+
+
+<div class="row row--space_none row--justify_center">
+    <div class="card">
+        <div class="card__panel card__panel--space_bottom_xl">
+            {% for btn in sortBtnArr %}
+            <button class="button button--sort js-button--sort" value="{{btn.id}}">
+                <span class="caption caption--color_grey caption--size_6">
+                    {{ btn.title }}
+                </span>
+            </button>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- <div class="row row--space_none js-row row--justify_center grid">
+    {% for card in imgArr %}
+    <div class="card js-card grid__card" data-option="{{card.data}}">
+        <div class="card__image card__image--size_l">
+            <div class="aspect-ratio">
+                <img src="./img/{{card.img}}" alt="" class="aspect-ratio__body">
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div> -->
+
+
+
+<div class="row row--space_none js-row row--justify_center">
+    <div class="card  card--size_s card--bg_aqua js-card" data-option="art">
+        <!-- <div class="card__image card__image--size_l">
+            <div class="aspect-ratio">
+                <img src="./img/mu1.jpg" alt="" class="aspect-ratio__body">
+            </div>
+        </div> -->
+    </div>
+    <div class="card  card--size_s card--bg_light_aqua js-card" data-option="branding">
+        <!-- <div class="card__image card__image--size_l ">
+            <div class="aspect-ratio">
+                <img src="./img/print1.jpg" alt="" class="aspect-ratio__body">
+            </div>
+        </div> -->
+    </div>
+
+    <div class="card  card--size_s card--bg_aqua js-card" data-option="illustrations">
+        <!-- <div class="card__image card__image--size_l">
+            <div class="aspect-ratio">
+                <img src="./img/ui2.jpg" alt="" class="aspect-ratio__body">
+            </div>
+        </div> -->
+    </div>
+
+    <div class="card  card--size_s  card--bg_light_aqua js-card" data-option="web">
+        <!-- <div class="card__image card__image--size_l">
+            <div class="aspect-ratio">
+                <img src="./img/web1.jpg" alt="" class="aspect-ratio__body">
+            </div>
+        </div> -->
+    </div>
+
+    <div class="card card--size_s card--bg_light_aqua js-card" data-option="art">
+        <!-- <div class="card__image card__image--size_l">
+            <div class="aspect-ratio">
+                <img src="./img/mu2.jpg" alt="" class="aspect-ratio__body">
+            </div>
+        </div> -->
+    </div>
+
+    <div class="card  card--size_s card--bg_aqua js-card" data-option="illustrations">
+        <div class="row row--justify_center">
+            <div class="cell cell--12">
+                <div class="card__image card__image--size_m card__image--space_bottom_l">
+                    <div class="aspect-ratio">
+                        <img src="./img/chain.png" alt="" class="aspect-ratio__body">
+                    </div>
+                </div>
+                <div class="card__pannel">
+                    <h5
+                        class="caption caption--bolder caption--color_white caption--align_center caption--size_6 caption--line_height_1">
+                        Free
+                        Website PSD</h5>
+                </div>
+                <div class="card__pannel">
+                    <h5
+                        class="caption caption--color_white caption--align_center caption--size_6 caption--line_height_1">
+                        Web</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card  card--size_s  card--bg_light_aqua js-card" data-option="branding">
+        <!-- <div class="card__image card__image--size_l">
+            <div class="aspect-ratio">
+                <img src="./img/ui1.jpg" alt="" class="aspect-ratio__body">
+            </div>
+        </div> -->
+    </div>
+
+    <div class="card  card--size_s  card--bg_aqua js-card" data-option="web">
+        <!-- <div class="card__image card__image--size_l ">
+            <div class="aspect-ratio">
+                <img src="./img/ui3.jpg" alt="" class="aspect-ratio__body">
+            </div>
+        </div> -->
+    </div>
+</div>

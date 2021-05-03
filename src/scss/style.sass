@@ -1,0 +1,218 @@
+@import "nullstyle.scss", "media/index.sass", "section.sass", "menu.sass", "columns.sass", "container.sass", "flex.sass", "caption.sass", "buttons.sass", 'arrows.sass', "swiper/swiper.scss", "form.sass"
+
+$space-1: 4px
+$space-2: 10px
+$space-3: 16px
+$space-4: 20px
+$space-5: 28px
+$space-6: 44px
+
+body
+    font-family: 'Open Sans', sans-serif
+
+.header
+    position: relative
+
+    &__
+        &title
+            margin-bottom: 12px
+        &label
+            position: relative
+            z-index: 1
+            padding: 22px 0
+            &::after
+                position: absolute
+                content: ''
+                height: 100%
+                width: 100vw
+                border-bottom: 80px solid #0000002f
+                border-left: 50px solid transparent
+                left: 0
+                top: 0
+                z-index: -1
+        &arrows
+            margin-top: 154px
+            margin-bottom: 80px
+            position: relative
+        &menu
+            padding: 20px 0
+
+.line
+    height: 1px
+    &--
+        &color_white
+            background: white
+
+        &color_grey
+            background: #ccc
+
+        &position_center
+            margin: 0 auto
+        &space
+            &_
+                &top_l
+                    margin-top: 24px
+                &bottom_l
+                    margin-bottom: 24px
+                &bottom_xxl
+                    margin-bottom: 56px
+        &size_s
+            width: 84px
+        &size_m
+            width: 108px
+        &size_l
+            width: 132px
+        &size_xl
+            width: 244px
+
+//-------------------cards------------------------------------------------///
+.card
+    position: relative
+    &__
+        &panel
+            &--
+                &space_top_s
+                    margin-top: 12px
+                &space_bottom_s
+                    margin-bottom: 12px
+                &space_bottom_m
+                    margin-bottom: 16px
+                &space_bottom_l
+                    margin-bottom: 28px
+                &space_bottom_xl
+                    margin-bottom: 44px
+                &space_bottom_xxl
+                    margin-bottom: 66px
+                &space_top_xxxl
+                    margin-top: 146px
+                &space_bottom_xxxl
+                    margin-bottom: 92px
+                &quotes
+                    position: relative
+                    ::before
+                        content: '\201c'
+                        font-size: 100px
+                        position: absolute
+                        top: -44px
+                        left: -30px
+                        opacity: 0.1
+                    ::after
+                        content: '\201c'
+                        font-size: 100px
+                        position: absolute
+                        bottom: -100px
+                        right: 10px
+                        opacity: 0.1
+        &image
+            &--
+
+                &size_m
+                    height: 60px
+                    width: 60px
+                    margin: 0 auto
+                &size_l
+                    height: 248px
+                    width: 300px
+                    overflow: hidden
+
+                &space_bottom_xl
+                    margin-bottom: 36px
+                &space_bottom_l
+                    margin-bottom: 24px
+                &space_bottom_s
+                    margin-bottom: 10px
+                &space_right_m
+                    margin-right: 12px
+
+        &label
+            position: absolute
+            bottom: 4px
+            left: 0
+            padding: 20px
+            width: 100%
+            background: white
+    &--
+        &size_m
+            max-width: 300px
+            height: 300px
+            margin: 0 auto
+            background: #39a38f
+        &size_s
+            height: 248px
+            width: 300px
+            overflow: hidden
+            display: flex
+            align-items: center
+            justify-content: center
+        &bg_light_aqua
+            background: #62c5b2
+        &bg_aqua
+            background: #39a38f
+        &bg_grey
+            background: #ffffff
+        &triangle_shape
+            position: relative
+            width: 166px
+            margin: 0 auto
+            margin-top: 146px
+            margin-bottom: 92px
+            padding: 18px 35px
+            &::after
+                content: ''
+                position: absolute
+                width: 0
+                height: 0
+                bottom: -20px
+                left: 50%
+                transform: translateX(-50%)
+                border-left: 20px solid transparent
+                border-right: 20px solid transparent
+                border-top: 20px solid #ffffff
+        &space_around_m
+            padding: 36px 48px
+
+.aspect-ratio
+    padding-bottom: 100%
+    position: relative
+    &__
+        &body
+            position: absolute
+            height: 100%
+            width: 100%
+            object-fit: contain
+            &--
+                &cover
+                    object-fit: cover
+
+//-----------------icon------------------//
+
+.icon
+    display: inline-block
+    color: grey
+    margin: 6px
+
+.button
+    &--
+        &sort
+            background: transparent
+            transition: 0.5s
+            margin: 0 12px
+            margin-bottom: 4px
+            &:hover
+                span
+                    color: #000000
+                    transition: 0.5s
+        &up
+            padding: 0
+            background: transparent
+            margin: 0 auto
+            display: block
+            span
+                margin-top: 8px
+                margin-bottom: -8px
+                border: solid grey
+                border-width: 0 5px 5px 0
+                display: inline-block
+                padding: 8px
+                transform: rotate(-135deg)
+                -webkit-transform: rotate(-135deg)

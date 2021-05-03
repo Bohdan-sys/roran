@@ -1,0 +1,19 @@
+//import this for use burger btn
+@import "burger.sass"
+
+.menu
+    +mq-till-md ()
+        +menu
+
+    &__item
+        position: relative
+
+    &__link
+        display: block
+        margin: 0 12px
+        +mq-lg ()
+            margin: 0 20px
+        &:hover
+            h4
+                color: black
+                transition: .5s

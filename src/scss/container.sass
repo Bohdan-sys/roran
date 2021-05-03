@@ -1,0 +1,43 @@
+$mq-small: 576px
+$mq-medium: 768px
+$mq-large: 960px
+
+%center
+    max-width: 100%
+    margin: 0 auto
+.container
+    padding: 0 6px
+    @extend %center
+    +mq-sm ()
+        max-width: $mq-small - 8px
+    +mq-md ()
+        max-width: $mq-medium - 8px
+    +mq-lg ()
+        max-width: $mq-large - 8px
+
+    &--
+        &space
+            &_
+                &top_xxxl
+                    padding-top: 72px
+                &bottom_xxxl
+                    padding-bottom: 72px
+                &top_xxl
+                    padding-top: 60px
+                &bottom_xxl
+                    padding-bottom: 60px
+                &top_xl
+                    padding-top: 52px
+                &bottom_xl
+                    padding-bottom: 52px
+                &bottom_l
+                    padding-bottom: 42px
+                &top_s
+                    padding-top: 20px
+                &bottom_s
+                    padding-bottom: 20px
+        &full_width
+            min-width: 100%
+        &full_height
+            height: 100vh
+            min-height: 900px

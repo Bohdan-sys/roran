@@ -1,0 +1,62 @@
+
+.form
+
+.form-control
+    margin-bottom: 20px
+    &__
+        &label
+            display: block
+            margin: 4px
+
+        &input
+
+            width: 100%
+            padding: 8px
+            font-size: 16px
+            border: 1px solid #ccc
+            background: transparent
+        &textarea
+            width: 100%
+            padding: 8px
+            resize: none
+            font-size: 16px
+            border: 1px solid #ccc
+            background: transparent
+        &button
+            background: #39a38f
+            padding: 14px 26px
+            transition: .2s
+            display: block
+            &:hover
+                background: #2e8575
+                transition: .2s
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    background-color: transparent
+
+    //validator style
+
+.field
+    position: relative
+    &--
+        &input
+            .alert
+                position: absolute
+                color: #39a38f
+                right: 0
+                top: 0
+
+        &textarea
+            .alert
+                color: #39a38f
+                position: absolute
+                right: 0
+                top: 0
+
+.bad
+    textarea, input
+        border: 1px solid #CE5454

@@ -1,0 +1,33 @@
+1. Copy this folder in folder with your project.
+2. Open folder with VS code etc.
+3. Run Terminal.
+4. Write npm i in Terminal.
+5. Write 'npm run watch' for Start working.
+
+___clarifications___
+
+--  #src - folder with all your drafts for main work,
+--  all additional .html files must be called from _(like  _header.html),
+--  for compilate _NAME.html drafts files into one, you should write in index.html file {% include "_NAME.htmll" %} .
+
+
+
+
+
+
+
+All plugin package
+
+BrowserSync 
+File Include 
+Del 
+Sass 
+Autoprefixer 
+Group CSS media-queries
+Rename 
+Clean CSS 
+Uglify ES 
+Babel 
+Imagemin 
+Sourcemaps
+Nunjucks
