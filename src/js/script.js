@@ -5,30 +5,43 @@ import FormValidator from '@yaireo/validator';
 
 
 window.addEventListener('DOMContentLoaded', function () {
-
+    //-----------------------------------------------------------------nav menu--------------------------//
     if (window.innerWidth < 768) {
         burger.addEventListener('click', () => toggler(burger));
         items.forEach((item, i) => { item.addEventListener('click', () => toggler(item)) });
     };
-
     const anchors = document.querySelectorAll('a[href*="#"]');
+    const navbar = document.querySelector(".js-section--sticky");
+    let sticky = navbar.offsetTop;
 
-    for (let anchor of anchors) {
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("active")
+        } else {
+            navbar.classList.remove("active");
+        }
+    });
+
+
+
+    anchors.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault()
-
             const blockID = anchor.getAttribute('href').substr(1)
-
-            document.getElementById(blockID).scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const scrolledElem = document.getElementById(blockID)
+            const toScroll = scrolledElem.getBoundingClientRect().top + pageYOffset - navbar.offsetHeight;
+            console.log(toScroll)
+            window.scrollTo({
+                top: toScroll,
+                behavior: "smooth"
             })
         })
-    }
+    })
 
 
 
-    //swiper
+    //------------------------------------------------------swiper-------------------------------------------------//
     Swiper.use([Navigation, Pagination])
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
@@ -61,7 +74,7 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    //sort container
+    //-----------------------------------------------------sort container-------------------------//
 
     let sortBtn = document.querySelectorAll('.js-button--sort'),
         articles = document.querySelectorAll('.js-card'),
@@ -81,7 +94,7 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
+    //------------------------------validator---------------------------------------------------//
     const valid = (a, b) => {
         let form = a.querySelectorAll(b);
         form.forEach(item => {
@@ -110,28 +123,12 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     };
     valid(document, '.js-form')
-
-
+    //----------------------------------------------arrow top ------------------------------------//
     const arrowTop = document.querySelector('.js-button--up')
-
     arrowTop.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         })
     })
-
-
-    window.onscroll = function () { myFunction() };
-
-    const navbar = document.querySelector(".js-section--sticky");
-    let sticky = navbar.offsetTop;
-
-    function myFunction() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("active")
-        } else {
-            navbar.classList.remove("active");
-        }
-    }
 });
