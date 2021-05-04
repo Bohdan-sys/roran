@@ -1,21 +1,23 @@
 
-$color-aqua: #39a38f
-$color-white: #fff
-$color-grey: #f0f0f0
-$color-dark_grey: #d8d8d8
+$color-primary: #39a38f
+$color-default: #fff
+$color-secondary: #f0f0f0
+$color-secondary_alternate: #d8d8d8
 .section
     overflow: hidden
+
     &--
         &bg_primary
-            background: $color-aqua
-        &bg_grey
-            background: $color-grey
-        &bg_dark_grey
-            background: $color-dark_grey
-        &bg_white
-            background: $color-white
+            background: $color-primary
+        &bg_secondary
+            background: $color-secondary
+        &bg_secondary_alternate
+            background: $color-secondary_alternate
+        &bg_default
+            background: $color-default
         &height_100vh
-            min-height: 100vh
+            height: 100vh
+            min-height: 900px
         &border_grey
             border-bottom: 1px solid #ccc
 
@@ -26,7 +28,7 @@ $color-dark_grey: #d8d8d8
                 position: absolute
                 border-left: 27px solid transparent
                 border-right: 27px solid transparent
-                border-bottom: 24px solid $color-grey
+                border-bottom: 24px solid $color-secondary
                 bottom: 432px
                 left: 50%
                 transform: translateX(-50%)
@@ -38,7 +40,7 @@ $color-dark_grey: #d8d8d8
                 width: 100%
                 bottom: 0
                 left: 0
-                background: $color-grey
+                background: $color-secondary
                 z-index: -1
         &green_shape
             position: relative
@@ -49,7 +51,7 @@ $color-dark_grey: #d8d8d8
                 width: 100%
                 top: 200px
                 left: 0
-                background: $color-aqua
+                background: $color-primary
             &::after
                 content: ''
                 position: absolute
@@ -60,7 +62,7 @@ $color-dark_grey: #d8d8d8
                 background: #f0f0f0
                 z-index: -1
         &sticky
-            &.active
+            &.is-active
                 position: fixed
                 top: 0
                 width: 100%

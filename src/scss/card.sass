@@ -1,0 +1,107 @@
+$color-aqua: #39a38f
+$color-light_aqua: #62c5b2
+$color-white: #fff
+.card
+    position: relative
+    &__
+        &panel
+            &--
+                &space_top_s
+                    margin-top: 12px
+                &space_bottom_s
+                    margin-bottom: 12px
+                &space_bottom_m
+                    margin-bottom: 16px
+                &space_bottom_l
+                    margin-bottom: 28px
+                &space_bottom_xl
+                    margin-bottom: 44px
+                &space_bottom_xxl
+                    margin-bottom: 66px
+                &space_top_xxxl
+                    margin-top: 146px
+                &space_bottom_xxxl
+                    margin-bottom: 92px
+                &quotes
+                    position: relative
+                    ::before
+                        content: '\201c'
+                        font-size: 100px
+                        position: absolute
+                        top: -44px
+                        left: -30px
+                        opacity: 0.1
+                    ::after
+                        content: '\201c'
+                        font-size: 100px
+                        position: absolute
+                        bottom: -100px
+                        right: 10px
+                        opacity: 0.1
+        &image
+            &--
+
+                &size_m
+                    height: 60px
+                    width: 60px
+                    margin: 0 auto
+                &size_l
+                    height: 248px
+                    width: 300px
+                    overflow: hidden
+
+                &space_bottom_xl
+                    margin-bottom: 36px
+                &space_bottom_l
+                    margin-bottom: 24px
+                &space_bottom_s
+                    margin-bottom: 10px
+                &space_right_m
+                    margin-right: 12px
+
+        &label
+            position: absolute
+            bottom: 4px
+            left: 0
+            padding: 20px
+            width: 100%
+            background: white
+    &--
+        &size_m
+            max-width: 300px
+            height: 300px
+            margin: 0 auto
+
+        &size_s
+            height: 248px
+            width: 300px
+            overflow: hidden
+            display: flex
+            align-items: center
+            justify-content: center
+        &bg_secondary
+            background: $color-light_aqua
+        &bg_primary
+            background: $color-aqua
+        &bg_default
+            background: $color-white
+        &triangle_shape
+            position: relative
+            width: 166px
+            margin: 0 auto
+            margin-top: 146px
+            margin-bottom: 92px
+            padding: 18px 35px
+            &::after
+                content: ''
+                position: absolute
+                width: 0
+                height: 0
+                bottom: -20px
+                left: 50%
+                transform: translateX(-50%)
+                border-left: 20px solid transparent
+                border-right: 20px solid transparent
+                border-top: 20px solid #ffffff
+        &space_around_m
+            padding: 36px 48px

@@ -5,21 +5,27 @@ import FormValidator from '@yaireo/validator';
 
 
 window.addEventListener('DOMContentLoaded', function () {
+
     //-----------------------------------------------------------------nav menu--------------------------//
     if (window.innerWidth < 768) {
         burger.addEventListener('click', () => toggler(burger));
-        items.forEach((item, i) => { item.addEventListener('click', () => toggler(item)) });
+        items.forEach(item => { item.addEventListener('click', () => toggler(item)) });
     };
+
     const anchors = document.querySelectorAll('a[href*="#"]');
-    const navbar = document.querySelector(".js-section--sticky");
+    const navbar = document.querySelector('.js-section--sticky');
     let sticky = navbar.offsetTop;
 
 
     window.addEventListener('scroll', () => {
+        let bottomElem = document.querySelector('main').firstElementChild
+
         if (window.pageYOffset >= sticky) {
-            navbar.classList.add("active")
+            bottomElem.style.paddingTop = `${navbar.offsetHeight - 4}px`
+            navbar.classList.add('is-active')
         } else {
-            navbar.classList.remove("active");
+            bottomElem.style.paddingTop = `0px`
+            navbar.classList.remove('is-active');
         }
     });
 
@@ -31,7 +37,6 @@ window.addEventListener('DOMContentLoaded', function () {
             const blockID = anchor.getAttribute('href').substr(1)
             const scrolledElem = document.getElementById(blockID)
             const toScroll = scrolledElem.getBoundingClientRect().top + pageYOffset - navbar.offsetHeight;
-            console.log(toScroll)
             window.scrollTo({
                 top: toScroll,
                 behavior: "smooth"

@@ -1,9 +1,53 @@
+<!-- use array for maping throw and add new data to array-->
+
+<!-- {% set imgArr= [{ img: "mu1.jpg", id: 1, title: "This is title", subtitle: "This is subtitle" }, { img: "mu2.jpg", id: 2, title: "This is title", subtitle: "This is subtitle" }]%} -->
+
+
+<!-- create html element from every array element -->
+
+<!-- 
+    {% for card in imgArr %}
+    <div class="swiper-slide">
+            <div class="card card--size_m card--bg_primary">
+                <div class="card__image">
+                    <div class="aspect-ratio">
+                        <img src="./img/{{card.img}}" alt="nasa" class="aspect-ratio__body aspect-ratio__body--cover">
+                    </div>
+                </div>
+                <div class="card__label">
+                    <div class="row">
+                        <div class="cell cell--8">
+                            <div class="card__panel">
+                                <h6 class="caption caption--color_primary caption--size_6 caption--line_height_1">
+                                    {{card.title}}</h6>
+                            </div>
+                            <div class="card__panel">
+                                <p class="caption caption--color_secondary caption--size_7 caption--line_height_1">
+                                    {{card.subtitle}}</p>
+                            </div>
+                        </div>
+                        <div class="cell cell--4">
+                            <a href="https://twitter.com/?lang=uk">
+                                <span class="icon icon-twitter"></span>
+                            </a>
+                            <a href="https://www.facebook.com/">
+                                <span class="icon icon-facebook"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+-->
+
 <div class="swiper-container">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
         <div class="swiper-slide">
-            <div class="card card--size_m">
+            <div class="card card--size_m card--bg_primary">
                 <div class="card__image">
                     <div class="aspect-ratio">
                         <img src="./img/nasa.jpg" alt="nasa" class="aspect-ratio__body aspect-ratio__body--cover">
@@ -13,11 +57,11 @@
                     <div class="row">
                         <div class="cell cell--8">
                             <div class="card__panel">
-                                <h6 class="caption caption--color_black caption--size_6 caption--line_height_1">
+                                <h6 class="caption caption--color_primary caption--size_6 caption--line_height_1">
                                     Jonathan Doe</h6>
                             </div>
                             <div class="card__panel">
-                                <p class="caption caption--color_grey caption--size_7 caption--line_height_1">
+                                <p class="caption caption--color_secondary caption--size_7 caption--line_height_1">
                                     Creative Director</p>
                             </div>
                         </div>
@@ -34,7 +78,7 @@
             </div>
         </div>
         <div class="swiper-slide">
-            <div class="card card--size_m">
+            <div class="card card--size_m  card--bg_primary">
                 <div class="card__image">
                     <div class="aspect-ratio">
                         <img src="./img/astranaut.jpg" alt="astranaut"
@@ -45,11 +89,11 @@
                     <div class="row">
                         <div class="cell cell--8">
                             <div class="card__panel">
-                                <h6 class="caption caption--color_black caption--size_6 caption--line_height_1">
+                                <h6 class="caption caption--color_primary caption--size_6 caption--line_height_1">
                                     Jonathan Doe</h6>
                             </div>
                             <div class="card__panel">
-                                <p class="caption caption--color_grey caption--size_7 caption--line_height_1">
+                                <p class="caption caption--color_secondary caption--size_7 caption--line_height_1">
                                     Creative Director</p>
                             </div>
                         </div>
@@ -67,7 +111,7 @@
             </div>
         </div>
         <div class="swiper-slide">
-            <div class="card card--size_m">
+            <div class="card card--size_m card--bg_primary">
                 <div class="card__image">
                     <div class="aspect-ratio">
 
@@ -77,11 +121,11 @@
                     <div class="row">
                         <div class="cell cell--8">
                             <div class="card__panel">
-                                <h6 class="caption caption--color_black caption--size_6 caption--line_height_1">
+                                <h6 class="caption caption--color_primary caption--size_6 caption--line_height_1">
                                     Mister Doe</h6>
                             </div>
                             <div class="card__panel">
-                                <p class="caption caption--color_grey caption--size_7 caption--line_height_1">
+                                <p class="caption caption--color_secondary caption--size_7 caption--line_height_1">
                                     Creative Director</p>
                             </div>
                         </div>
@@ -98,7 +142,7 @@
             </div>
         </div>
         <div class="swiper-slide">
-            <div class="card card--size_m">
+            <div class="card card--size_m card--bg_primary">
                 <div class="card__image">
                     <div class="aspect-ratio">
 
@@ -108,11 +152,11 @@
                     <div class="row">
                         <div class="cell cell--8">
                             <div class="card__panel">
-                                <h6 class="caption caption--color_black caption--size_6 caption--line_height_1">
+                                <h6 class="caption caption--color_primary caption--size_6 caption--line_height_1">
                                     Jonathan Doe</h6>
                             </div>
                             <div class="card__panel">
-                                <p class="caption caption--color_grey caption--size_7 caption--line_height_1">
+                                <p class="caption caption--color_secondary caption--size_7 caption--line_height_1">
                                     Creative Director</p>
                             </div>
                         </div>
@@ -129,7 +173,7 @@
             </div>
         </div>
         <div class="swiper-slide">
-            <div class="card card--size_m">
+            <div class="card card--size_m card--bg_primary">
                 <div class="card__image">
                     <div class="aspect-ratio">
 
@@ -139,11 +183,11 @@
                     <div class="row">
                         <div class="cell cell--8">
                             <div class="card__panel">
-                                <h6 class="caption caption--color_black caption--size_6 caption--line_height_1">
+                                <h6 class="caption caption--color_primary caption--size_6 caption--line_height_1">
                                     Jonathan Doe</h6>
                             </div>
                             <div class="card__panel">
-                                <p class="caption caption--color_grey caption--size_7 caption--line_height_1">
+                                <p class="caption caption--color_secondary caption--size_7 caption--line_height_1">
                                     Creative Director</p>
                             </div>
                         </div>

@@ -3,7 +3,6 @@ $screen-md: 992px
 $screen-lg: 1200px
 
 .button
-
     &--
         &sort
             background: transparent
@@ -13,4 +12,23 @@ $screen-lg: 1200px
             &:hover
                 span
                     color: #000000
+                    transition: 0.5s
+        &up
+            padding: 0
+            background: transparent
+            margin: 0 auto
+            display: block
+            span
+                margin-top: 8px
+                margin-bottom: -8px
+                border: solid grey
+                border-width: 0 5px 5px 0
+                display: inline-block
+                padding: 8px
+                transition: 0.5s
+                transform: rotate(-135deg)
+                -webkit-transform: rotate(-135deg)
+            &:hover
+                span
+                    margin-top: 0px
                     transition: 0.5s
