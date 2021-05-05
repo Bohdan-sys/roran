@@ -3,6 +3,7 @@ $color-light_aqua: #62c5b2
 $color-white: #fff
 .card
     position: relative
+
     &__
         &panel
             &--
@@ -65,13 +66,15 @@ $color-white: #fff
                     height: 60px
                     width: 60px
                     margin: 0 auto
+
                 &size_l
                     height: 248px
-                    width: 300px
-                    overflow: hidden
+                    min-width: 300px
 
                 &space_bottom_xl
                     margin-bottom: 36px
+                    +mq-till-md()
+                        margin-bottom: 24px
                 &space_bottom_l
                     margin-bottom: 24px
                 &space_bottom_s

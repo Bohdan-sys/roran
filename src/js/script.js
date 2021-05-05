@@ -94,7 +94,7 @@ window.addEventListener('DOMContentLoaded', function () {
                     return article.dataset.option == item.value
                 }
             });
-            let map = filter.map(current => current.outerHTML).join("")
+            let map = filter.map(current => current.parentNode.outerHTML).join("")
             row.innerHTML = map;
         });
     });
