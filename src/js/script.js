@@ -104,7 +104,7 @@ window.addEventListener('DOMContentLoaded', function () {
         let form = a.querySelectorAll(b);
         form.forEach(item => {
             let validator = new FormValidator();
-            validator.texts.email = 'Email must be look like "name@mail.com"';
+            validator.texts.email = 'Email should be like "name@mail.com"';
 
             // on form "submit" event
             item.addEventListener('blur', function (e) {
